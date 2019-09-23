@@ -13,6 +13,8 @@ export class EditproductComponent implements OnInit {
   pid;
   product;
   image;
+  categories:any;
+  locations:any;
   public uploader: FileUploader = new FileUploader({ url: URL, itemAlias: 'image' });
   constructor(private router: Router, private route: ActivatedRoute, private ms: MsgService) { }
 
@@ -21,7 +23,14 @@ export class EditproductComponent implements OnInit {
     this.ms.getSingleProduct(this.pid).subscribe(data=>{
       this.product = data[0];
     })
-    
+    this.ms.getCat().subscribe(data=>{
+      
+      this.categories = data;
+    })
+
+    this.ms.getL().subscribe(data=>{
+      this.locations = data;
+    })
     
     this.uploader.onAfterAddingFile = (image) => { image.withCredentials = false; };
     this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
