@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { MsgService} from "../msg.service";
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 
-const URL = 'http://localhost:3000/market/edit';
+const URL = 'https://onlinemarketplace-server.herokuapp.com/market/edit';
 @Component({
   selector: 'app-editproduct',
   templateUrl: './editproduct.component.html',

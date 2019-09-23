@@ -15,7 +15,7 @@
         <!-- single product-->
 <article class="product" *ngFor="let p of aproducts">
         <div class="img-container">
-            <img src="http://localhost:3000/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
+            <img src="https://onlinemarketplace-server.herokuapp.com/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
             <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Item</a>
             <a routerLink="/editproduct/{{p._id}}" class="edt-btn" style="text-decoration: none"> <i class="fas fa-edit"></i>&nbsp;&nbsp;Edit Item</a>
             <a (click)="deleteProduct(p._id)" class="dlt-btn" style="text-decoration: none"> <i class="fas fa-trash-alt"></i>&nbsp;&nbsp;Delete Item</a>
@@ -45,7 +45,7 @@
         <!-- single product-->
 <article class="product" *ngFor="let p of sproducts">
         <div class="img-container">
-            <img src="http://localhost:3000/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
+            <img src="https://onlinemarketplace-server.herokuapp.com/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
             <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Item</a>
         </div>
         <h3>{{p.title}}</h3>

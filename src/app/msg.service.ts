@@ -8,54 +8,54 @@ export class MsgService {
   constructor(private http: HttpClient) { }
 
 getCat(){
-    return this.http.get("http://localhost:3000/market");
+    return this.http.get("https://onlinemarketplace-server.herokuapp.com/market");
 }
 
 getProducts(cat){
-    return this.http.get("http://localhost:3000/market/products/"+cat);
+    return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/products/"+cat);
 }
 
 getL(){
-  return this.http.get("http://localhost:3000/market/loc");
+  return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/loc");
 }
 
 getFiltered(x,loc_selected,search,category){
-  return this.http.post("http://localhost:3000/market/filter/",{filter:x,location:loc_selected,search:search,category:category})
+  return this.http.post("https://onlinemarketplace-server.herokuapp.com/market/filter/",{filter:x,location:loc_selected,search:search,category:category})
 }
 
 getSingleProduct(id){
-  return this.http.get("http://localhost:3000/market/singleproduct/"+ id);
+  return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/singleproduct/"+ id);
 }
 
 register(user){
-  return this.http.post("http://localhost:3000/user/signup", user)
+  return this.http.post("https://onlinemarketplace-server.herokuapp.com/user/signup", user)
 }
 
 login(un,pw){
-  return this.http.post("http://localhost:3000/user/login", {username:un, password:pw});
+  return this.http.post("https://onlinemarketplace-server.herokuapp.com/user/login", {username:un, password:pw});
 }
 
 getUserProductsA(user){
-  return this.http.get("http://localhost:3000/market/sellerproductsA/"+ user);
+  return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/sellerproductsA/"+ user);
 }
 
 getUserProductsS(user){
-  return this.http.get("http://localhost:3000/market/sellerproductsS/"+ user);
+  return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/sellerproductsS/"+ user);
 }
 
 addProduct(product){
-  return this.http.post("http://localhost:3000/market/add/",product);
+  return this.http.post("https://onlinemarketplace-server.herokuapp.com/market/add/",product);
 }
 
 markSold(id){
-  return this.http.get("http://localhost:3000/market/marksold/"+id)
+  return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/marksold/"+id)
 }
 
 editProduct(product){
-  return this.http.post("http://localhost:3000/market/editproduct/", product)
+  return this.http.post("https://onlinemarketplace-server.herokuapp.com/market/editproduct/", product)
 }
 
 deleteProduct(id){
-  return this.http.get("http://localhost:3000/market/deleteproduct/"+id)
+  return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/deleteproduct/"+id)
 }
 }
