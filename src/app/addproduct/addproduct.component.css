@@ -1,0 +1,6 @@
+table{
+    background-color:  rgba(245, 203, 164,0.9);
+}
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: rgb(61, 53, 53); 
+}

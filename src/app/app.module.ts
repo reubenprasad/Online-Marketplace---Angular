@@ -14,7 +14,9 @@ import { CategoriesComponent } from './categories/categories.component';
 import { SingleproductComponent } from './singleproduct/singleproduct.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { SellerComponent } from './seller/seller.component'
+import { SellerComponent } from './seller/seller.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { EditproductComponent } from './editproduct/editproduct.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { SellerComponent } from './seller/seller.component'
     SingleproductComponent,
     LoginComponent,
     RegisterComponent,
-    SellerComponent
+    SellerComponent,
+    AddproductComponent,
+    EditproductComponent
   ],
   imports: [
     BrowserModule,

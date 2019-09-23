@@ -42,4 +42,20 @@ getUserProductsA(user){
 getUserProductsS(user){
   return this.http.get("http://localhost:3000/market/sellerproductsS/"+ user);
 }
+
+addProduct(product){
+  return this.http.post("http://localhost:3000/market/add/",product);
+}
+
+markSold(id){
+  return this.http.get("http://localhost:3000/market/marksold/"+id)
+}
+
+editProduct(product){
+  return this.http.post("http://localhost:3000/market/editproduct/", product)
+}
+
+deleteProduct(id){
+  return this.http.get("http://localhost:3000/market/deleteproduct/"+id)
+}
 }

@@ -3,7 +3,7 @@
       <a href="#" class="brand-logo">Online&nbsp;Marketplace</a>
       <ul id="nav-mobile" class="right">
         <li><a routerLink="/market/categories">Buy</a></li>
-        <li><a routerLink="/">Log Out</a></li>
+        <li><a (click)="logOut()">Log Out</a></li>
       </ul>
     </div>
   </nav>
@@ -16,15 +16,20 @@
 <article class="product" *ngFor="let p of aproducts">
         <div class="img-container">
             <img src="http://localhost:3000/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
-            <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Details</a>
+            <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Item</a>
+            <a routerLink="/editproduct/{{p._id}}" class="edt-btn" style="text-decoration: none"> <i class="fas fa-edit"></i>&nbsp;&nbsp;Edit Item</a>
+            <a (click)="deleteProduct(p._id)" class="dlt-btn" style="text-decoration: none"> <i class="fas fa-trash-alt"></i>&nbsp;&nbsp;Delete Item</a>
         </div>
-        <h3>{{p.title}}</h3>
-        <h4>₹{{p.price}}</h4>
+        <h4>{{p.title}}</h4>
+        <a (click)="markSold(p._id)" class="banner-btn" style="text-decoration: none"> <i class="fas fa-coins"></i>&nbsp;Mark as Sold</a>
+        <br>
+        <br>
     </article>
+        
 
     <article class="product" >
         <div class="img-container"> 
-        <a routerLink="/seller/addproduct">  <img src="../../assets/images/Plus Square Icon.png" alt="add" class="product-img" width="285px" height="215px"></a>
+        <a routerLink="/addproduct">  <img src="../../assets/images/Plus Square Icon.png" alt="add" class="product-img" width="285px" height="215px"></a>
         </div>
         <h3>Add New Item</h3>
     </article>
@@ -41,7 +46,7 @@
 <article class="product" *ngFor="let p of sproducts">
         <div class="img-container">
             <img src="http://localhost:3000/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
-            <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Details</a>
+            <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Item</a>
         </div>
         <h3>{{p.title}}</h3>
         <h4>₹{{p.price}}</h4>

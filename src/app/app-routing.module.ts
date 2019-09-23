@@ -9,12 +9,16 @@ import {SingleproductComponent} from './singleproduct/singleproduct.component'
 import {LoginComponent} from './login/login.component'
 import {RegisterComponent} from './register/register.component'
 import {SellerComponent} from './seller/seller.component'
+import {AddproductComponent} from './addproduct/addproduct.component'
+import {EditproductComponent} from './editproduct/editproduct.component'
 
 const routes: Routes = [
   { path : "",component:HomeComponent},
     { path : "login",component:LoginComponent},
     { path : "register",component:RegisterComponent} ,
     { path : "seller", component:SellerComponent},
+    { path : "addproduct", component:AddproductComponent},
+    { path : "editproduct/:pid", component:EditproductComponent},
   { path : "market",component:MarketComponent, children:[
     { path : "products/:cat",component:ProductsComponent},
     { path : "categories",component:CategoriesComponent},

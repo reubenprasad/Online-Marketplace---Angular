@@ -1,0 +1,49 @@
+<nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Online&nbsp;Marketplace</a>
+      <ul id="nav-mobile" class="right">
+        <li><a routerLink="/market/categories">Buy</a></li>
+        <li><a routerLink="/">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h4 style="text-align: center">Add New Item</h4>
+  <table class="table" style="width: 600px; margin:auto; border: 2px solid black; border-collapse: collapse;">
+    <tr>
+        <td>Title :</td>
+        <td><input type="text"  name="title" placeholder="Enter Title" [(ngModel)]="product.title" required></td>
+    </tr>
+    <tr>
+        <td>Price :</td>
+        <td><input type="number"  name="price" placeholder="Enter Price" [(ngModel)]="product.price" required></td>
+    </tr>
+
+    <tr>
+        <td>Category :</td>
+        <td>
+          <datalist id="csuggestions" >
+          <option *ngFor="let c of categories">{{c.name}}</option>
+          </datalist>
+          <input class="search-inp" autoComplete="on" list="csuggestions" placeholder="Select Category" [(ngModel)]="product.category"> 
+        </td>
+    </tr>
+    <tr>
+        <td>Location :</td>
+        <td>
+          <datalist id="lsuggestions" >
+          <option *ngFor="let l of locations">{{l.name}}</option>
+          </datalist>
+          <input class="search-inp" autoComplete="on" list="lsuggestions" placeholder="Select Location" [(ngModel)]="product.location"> 
+        </td>
+    </tr>
+
+    <tr>
+        <td>Image :</td>
+        <td><input type="file" class="form-control" name="image"  placeholder="Upload Image" [(ngModel)]="image" ng2FileSelect [uploader]="uploader"required></td>
+    </tr>
+    
+    <tr style="text-align: left">                        
+        <td></td>
+        <td style="text-align: center"><a (click)="uploader.uploadAll(); addProduct()" class="banner-btn" style="text-decoration: none"> <i class="fas fa-plus"></i>&nbsp;Add</a></td>
+    </tr>
+</table>

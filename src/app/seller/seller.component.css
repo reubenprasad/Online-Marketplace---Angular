@@ -40,7 +40,95 @@ h3{
 h4{
     color: black;
     font-size: 25px;
+    
 }
 /* .products{
     background-color: beige
 } */
+
+.bag-btn {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(101%);
+    cursor: pointer;
+    width:160px;
+  }
+  .bag-btn:hover {
+    color: var(--mainWhite);
+  }
+  .dlt-btn {
+    position: absolute;
+    top: 80%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(101%);
+    cursor: pointer;
+    width:160px;
+  }
+  .dlt-btn:hover {
+    color: var(--mainWhite);
+  }
+  .img-container:hover .dlt-btn {
+    transform: translateX(0);
+  }
+  .fa-shopping-cart {
+    margin-right: 0.5rem;
+  }
+  .img-container:hover .bag-btn {
+    transform: translateX(0);
+  }
+
+  .edt-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(101%);
+    cursor: pointer;
+    width:160px;
+  }
+  .edt-btn:hover {
+    color: var(--mainWhite);
+  }
+  .img-container:hover .edt-btn {
+    transform: translateX(0);
+  }
+
+  .banner-btn {
+    padding: 0.8rem 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+  }
+  .banner-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+  }
+  article{
+      text-align: center
+  }
