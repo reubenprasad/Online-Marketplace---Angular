@@ -1,0 +1,46 @@
+.search{
+    width: 100%;
+    border-right: 3px black ;
+}
+.loc-searchbox{
+    display: inline-block;
+    width: 30%;
+    
+}
+header{
+    background-color:  rgba(245, 203, 164,0.8);
+}
+::placeholder{
+    color: black;
+    text-align: center;
+}
+.search-inp{
+    text-align: center;
+}
+.prod-search{
+    display: inline-block;
+    width:30%;
+}
+h5{
+    text-align: center;
+}
+article{
+    background-color:  rgba(245, 203, 164,0.9);
+}
+.product{
+    border: 1px dotted black;
+}
+h2{
+    margin-top:0.75rem;
+}
+h3{
+    font-weight: bold;
+    font-size: 25px;
+}
+h4{
+    color: black;
+    font-size: 25px;
+}
+/* .products{
+    background-color: beige
+} */

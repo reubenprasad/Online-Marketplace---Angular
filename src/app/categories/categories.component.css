@@ -1,0 +1,10 @@
+.product{
+    border: 1px dotted black;
+    background-color :rgba(245, 203, 164,0.9);
+}
+h6{
+    text-align: center;
+}
+img{
+    border-bottom: dotted black 1px;
+}

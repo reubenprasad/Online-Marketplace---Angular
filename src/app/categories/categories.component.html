@@ -1,0 +1,19 @@
+<h4 style="text-align: center">Categories</h4>
+<section class="products">
+      <div class="section-title">
+         
+      </div>
+      <div class="products-center">
+          <!-- single product-->
+  <article class="product" *ngFor="let c of categories">
+          <div class="img-container">
+              <img src="http://localhost:3000/market/view/{{c.image}}" alt="product" class="product-img" height="150px" width="150px">
+              <a routerLink="/market/products/{{c.name}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View</a>
+          </div>
+          <h6>{{c.name}}</h6>
+      </article>
+      
+      <!-- end of single product-->
+      </div>
+      
+  </section>

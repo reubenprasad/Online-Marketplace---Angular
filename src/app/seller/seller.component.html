@@ -1,0 +1,51 @@
+<nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Online&nbsp;Marketplace</a>
+      <ul id="nav-mobile" class="right">
+        <li><a routerLink="/market/categories">Buy</a></li>
+        <li><a routerLink="/">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+<section class="products">
+    <div class="section-title">
+        <h2>Your Active Items</h2>
+    </div>
+    <div class="products-center">
+        <!-- single product-->
+<article class="product" *ngFor="let p of aproducts">
+        <div class="img-container">
+            <img src="http://localhost:3000/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
+            <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Details</a>
+        </div>
+        <h3>{{p.title}}</h3>
+        <h4>₹{{p.price}}</h4>
+    </article>
+
+    <article class="product" >
+        <div class="img-container"> 
+        <a routerLink="/seller/addproduct">  <img src="../../assets/images/Plus Square Icon.png" alt="add" class="product-img" width="285px" height="215px"></a>
+        </div>
+        <h3>Add New Item</h3>
+    </article>
+    <!-- end of single product-->
+    </div>
+</section>
+
+<section class="products" *ngIf="empty">
+    <div class="section-title">
+        <h2 >Sold Items</h2>
+    </div>
+    <div class="products-center">
+        <!-- single product-->
+<article class="product" *ngFor="let p of sproducts">
+        <div class="img-container">
+            <img src="http://localhost:3000/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
+            <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Details</a>
+        </div>
+        <h3>{{p.title}}</h3>
+        <h4>₹{{p.price}}</h4>
+    </article>
+    <!-- end of single product-->
+    </div>
+</section>

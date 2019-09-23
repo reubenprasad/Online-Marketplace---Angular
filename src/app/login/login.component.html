@@ -1,0 +1,38 @@
+<nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Online&nbsp;Marketplace</a>
+      <ul id="nav-mobile" class="right">
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="hero">
+   <div class="row">
+    <div class="banner">
+        <h1 class="banner-title">LOGIN</h1>
+        <div id="login">  
+                                <table class="table col s12" style="width: 400px; margin:auto; border: 2px solid black; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="font-weight: 700">Username :</td>
+                                        <td><input type="text"  name="un" placeholder="Enter Username" [(ngModel)]="un" required></td>
+                                    </tr>
+                
+                                    <tr>
+                                        <td style="font-weight: 700">Password :</td>
+                                        <td><input type="password"  name="pw" placeholder="Enter Password" [(ngModel)]="pw" required></td>
+                                    </tr>
+                
+                                    <tr style="text-align: right">                        
+                                        <td></td>
+                                        <td><a (click)="login()" class="banner-btn" style="text-decoration: none"> <i class="fas fa-sign-in-alt"></i>&nbsp;Login</a></td>
+                                    </tr>
+                                </table>
+                                    
+    </div>
+        
+
+    </div>
+   </div>
+</div>
+       

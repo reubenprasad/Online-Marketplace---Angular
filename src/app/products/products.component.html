@@ -1,0 +1,50 @@
+<header>
+    <div class="search">
+           &nbsp;  <i class="fas fa-map-marker-alt fa-lg"></i>  &nbsp;
+       <div class="loc-searchbox" (mouseover)="getLoc()">
+           <datalist id="lsuggestions" >
+               <option *ngFor="let l of loc">{{l.name}}</option>
+           </datalist>
+           <input class="search-inp" autoComplete="on" list="lsuggestions" placeholder="Select Location" [(ngModel)]="loc_selected" (change)="applyFilter(0)"> 
+       </div>
+   
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <i class="fas fa-search fa-lg"></i>&nbsp;
+   
+       <div class="prod-search">
+           <datalist id="psuggestions" >
+                  <option *ngFor="let s of products">{{s.title}}</option>
+               </datalist>
+               <input class="search-inp" autoComplete="on" list="psuggestions" placeholder="Search the Marketplace"[(ngModel)]="search">
+        </div>
+        &nbsp;&nbsp; <a class="waves-effect waves-light btn" (click)="applyFilter(0)">Search</a>
+        <div class="filters" style="display: inline-block">
+     &nbsp;<i class="fas fa-filter"></i> &nbsp; Filters:
+     <a [routerLink]="" (click)="applyFilter(1)">Price: Low to High</a>&nbsp;&nbsp;&nbsp;
+     <a [routerLink]="" (click)="applyFilter(2)">Price: High to Low</a>&nbsp;&nbsp;&nbsp;
+     <a [routerLink]="" (click)="applyFilter(3)">Most Recent</a>
+        </div>
+    </div>
+     </header>
+
+     <section class="products">
+        <div class="section-title">
+            <h2>{{cat}}</h2>
+            <h5 *ngIf="empty">No Results</h5>
+        </div>
+        <div class="products-center">
+            <!-- single product-->
+    <article class="product" *ngFor="let p of products">
+            <div class="img-container">
+                <img src="http://localhost:3000/market/view/{{p.image}}" alt="product" class="product-img" width="285px" height="215px">
+                <a routerLink="/market/singleproduct/{{p._id}}" class="bag-btn" style="text-decoration: none"> <i class="fas fa-arrow-circle-right"></i>&nbsp;&nbsp;View Details</a>
+            </div>
+            <h3>{{p.title}}</h3>
+            <h4>₹{{p.price}}</h4>
+        </article>
+        <!-- end of single product-->
+        </div>
+        
+    </section>

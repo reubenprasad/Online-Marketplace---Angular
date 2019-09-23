@@ -1,0 +1,51 @@
+<nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Online&nbsp;Marketplace</a>
+      <ul id="nav-mobile" class="right">
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+<div class="hero">
+    <div class="row">
+     <div class="banner">
+         <p class="banner-title">REGISTER</p>
+         <div id="login">  
+                                 <table class="table col s12" style="width: 400px; margin:auto; border: 2px solid black; border-collapse: collapse;">
+                                    <tr>
+                                        <td>Name :</td>
+                                        <td><input type="text" class="form-control" name="nr" [(ngModel)]="user.name" placeholder="Enter Name" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Username :</td>
+                                        <td><input type="text" class="form-control" name="unr" [(ngModel)]="user.username"placeholder="Enter Username" required></td>
+                                    </tr>
+                
+                                    <tr>
+                                        <td>Password :</td>
+                                        <td><input type="password" class="form-control" name="pwr"[(ngModel)]="user.password" placeholder="Enter Password" required></td>
+                                    </tr>
+      
+                                    <tr>
+                                        <td>Mobile :</td>
+                                        <td><input type="text" class="form-control" name="mr" [(ngModel)]="user.mobile"pattern="[6789][0-9]{9}" placeholder="Enter Mobile" required></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Email :</td>
+                                        <td><input type="email" class="form-control" name="er" [(ngModel)]="user.email"placeholder="Enter Email" required></td>
+                                    </tr>
+                                    <tr style="text-align: right">                        
+                                        <td></td>
+                                        <td><a (click)="signUp()" class="banner-btn" style="text-decoration: none"> <i class="fas fa-user-plus"></i>&nbsp;Sign Up</a></td>
+                                    </tr>
+                                 </table>
+                                     
+     </div>
+         
+ 
+     </div>
+    </div>
+ </div>
