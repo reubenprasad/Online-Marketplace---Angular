@@ -58,4 +58,8 @@ editProduct(product){
 deleteProduct(id){
   return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/deleteproduct/"+id)
 }
+
+getSeller(seller){
+  return this.http.get("https://onlinemarketplace-server.herokuapp.com/market/getseller/"+ seller);
+}
 }
