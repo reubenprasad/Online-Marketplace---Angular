@@ -17,11 +17,12 @@ export class SingleproductComponent implements OnInit {
     this.id = this.router.snapshot.paramMap.get('id');
     this.ms.getSingleProduct(this.id).subscribe(data=>{
       this.products = data[0];
+      this.ms.getSeller(this.products.seller).subscribe(data=>{
+        this.seller = data[0];
+      })
     })
 
-    this.ms.getSeller(this.products.seller).subscribe(data=>{
-      this.seller = data[0];
-    })
+    
   }
 
 }
